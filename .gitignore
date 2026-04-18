@@ -1,0 +1,14 @@
+# IntelliJ
+.idea/
+
+# Uploads
+uploads/
+ApplicationGoogleDrive/uploads/
+
+# Node
+frontend/node_modules/
+
+# Logs
+*.log
+
+.env

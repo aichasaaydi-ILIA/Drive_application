@@ -1,0 +1,57 @@
+/* styles.css */
+@import '@angular/material/prebuilt-themes/indigo-pink.css';
+
+html, body { 
+  height: 100%; 
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif; 
+  background-color: #f5f5f5;
+}
+
+.container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.mt-20 { margin-top: 20px; }
+.mb-20 { margin-bottom: 20px; }
+.ml-10 { margin-left: 10px; }
+.mr-10 { margin-right: 10px; }
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+.mat-card {
+  margin-bottom: 20px;
+}
+
+.file-card {
+  transition: transform 0.2s;
+}
+
+.file-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Styles spécifiques pour les formulaires */
+.mat-form-field {
+  margin-bottom: 16px !important;
+}
+
+/* Ajoutez une marge entre les champs de formulaire */
+mat-form-field + mat-form-field {
+  margin-top: 8px;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
