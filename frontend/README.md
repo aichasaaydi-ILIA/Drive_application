@@ -1,59 +1,35 @@
-# Frontend
+# Frontend Angular - Drive Application
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.0.6.
+Cette partie du projet correspond au **Frontend** de l'application Google Drive Clone. Elle a été générée avec [Angular CLI](https://github.com/angular/angular-cli) version 19.0.6.
 
-## Development server
+> ℹ️ **Note :** Veuillez consulter le fichier **`README.md` principal à la racine du projet** pour une vue d'ensemble détaillée incluant les instructions du backend (Spring Boot), la configuration de la base de données et l'aspect Sécurité/JWT.
 
-To start a local development server, run:
+## 🚀 Fonctionnalités Implémentées
 
-```bash
-ng serve
-```
+- Authentification des utilisateurs (Login, Redirection OAuth2 Google).
+- Upload, visualisation, et gestion des fichiers.
+- Gestion des permissions sur les fichiers privés (Demande / Autorisation d'accès).
+- Interfaces Material Design fluides et responsives.
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+## ⚙️ Serveur de développement
 
-## Code scaffolding
+Pour lancer ce projet en local :
+1. Assurez-vous d'avoir exécuté `npm install` au préalable.
+2. Exécutez `npm start` ou `ng serve` pour lancer le serveur local.
+3. Accédez à `http://localhost:4200/`.
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+L'application va se recharger automatiquement si vous modifiez l'un des fichiers sources.
 
-```bash
-ng generate component component-name
-```
+## 🏗️ Build
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+Exécutez `npm run build` ou `ng build` pour compiler le projet pour la production. Les différentes ressources de base (HTML/CSS/JS) seront alors générées dans le dossier `dist/`.
 
-```bash
-ng generate --help
-```
+## 🧪 Tests Unitaires et E2E
 
-## Building
+Exécutez `ng test` pour lancer les tests unitaires vis-à-vis du code Karma/Jasmine.
+Pour des tests de bout en bout (e2e), vous pouvez configurer Cypress ou Playwright via Angular CLI.
 
-To build the project run:
+## 🤝 Lien avec l'API Backend
 
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Les appels XHR (Ajax) sont effectués par le module `HttpClient` natif d'Angular vers le serveur backend Spring Boot par défaut sur le port 8080 : `http://localhost:8080`.
+Il y a un système d'intercepteurs (`Interceptor`) qui attache le token JWT automatiquement dans l'entête `Authorization` pour garantir la sécurité.
